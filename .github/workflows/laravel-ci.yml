@@ -27,5 +27,8 @@ jobs:
     - name: Generate key
       run: php artisan key:generate
 
+    - name: Check Code Style
+      run: vendor/bin/phpcs --standard=PSR12 app/
+
     - name: Run Tests
       run: php artisan test
